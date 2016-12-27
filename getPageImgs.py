@@ -7,7 +7,7 @@ import getTagImgs
 def loadurl(url):
 	try:
 		conn = urlopen(url,timeout=5)
-		html = conn.read()
+		html = conn.read().decode('utf-8')
 		return html
 	except URLError:
 		return ""
